@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    border-bottom: 1px solid black;
+}
+.slick-track {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+    .active {
+        color: #9628fd;
+        border-bottom: none
+    }
+}
