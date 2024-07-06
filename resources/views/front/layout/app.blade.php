@@ -33,7 +33,7 @@
                     src="{{ setting('site_logo') != null ? Storage::url(setting('site_logo')) : '' }}"
                     alt="logo"></a>
         </div>
-        <div class="w-1/3 hidden md:block">
+        <div class="w-1/4 hidden md:block">
             <ul class="flex gap-8 justify-center font-medium">
                 <li class="{{ request()->is('/') ? 'active' : '' }} whitespace-nowrap"><a
                         href="{{ route('index') }}">Hem</a></li>
@@ -43,6 +43,11 @@
                         href="{{ route('pricing') }}">Vår prissättning</a></li>
                 <li class="{{ request()->is('contact') ? 'active' : '' }} whitespace-nowrap"><a
                         href="{{ route('contact') }}">Kontakt</a></li>
+                        <li>
+                            <select class="form-control lang-change">
+                                <option value="en" {{ session()->get('lang_code')=='en' ? 'selected' : ''}}>EN</option>
+                                <option value="swe" {{ session()->get('lang_code')=='swe' ? 'selected' : ''}}>SWE</option>
+                           </select></li>
             </ul>
         </div>
         <div class="w-1/2 md:w-1/3 flex justify-end gap-1 sm:gap-3">
@@ -182,6 +187,17 @@
             menu.classList.toggle('show');
         });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+ 
+        var url = "{{ route('lang.update') }}";
+      
+          $('.lang-change').change(function(){
+           let lang_code = $(this).val();
+            window.location.href = url + "?lang="+ lang_code;
+          });
+      
+      </script>
 
     <script src="{{ asset('assets') }}/js/jquery.min.js"></script>
     <script src="{{ asset('assets/js/toastr.min.js') }}"></script>

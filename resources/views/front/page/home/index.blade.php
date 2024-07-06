@@ -9,7 +9,7 @@
             <div
                 class="h-full w-[85%] mx-auto font-primary font-medium flex flex-col gap-8 justify-center items-start md:items-center">
                 <h3 class="lg:text-7xl md:text-4xl text-4xl text-gray-800 font-bold md:text-center">
-                    Vi hittar din hyresrätt enligt dina kriterier. Enklare blir det inte.</h3>
+                    {{ __('home.banner_heading') }}</h3>
                 <h6 class="text-gray-800 md:px-20 md:text-center hidden md:block">Vårt erfarna team och avancerade AI-teknik
                     övervakar den
                     svenska

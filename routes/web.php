@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LangController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Public\DashboardController;
 use Illuminate\Support\Facades\Auth;
@@ -42,3 +43,7 @@ Route::get('/sym', function () {
     return response()->json("Link Create Successfully!");
 });
 
+Route::group(['as' => 'lang.', 'prefix' => 'lang'], function () {
+    Route::get('/', [LangController::class, 'index'])->name('index');
+    Route::get('update', [LangController::class, 'update'])->name('update');
+});

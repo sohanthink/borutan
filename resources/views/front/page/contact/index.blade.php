@@ -15,8 +15,7 @@
             style="background-image: url({{ asset('Images/Stockholm-x-Home--1--.webp') }});">
             {{-- <span class="p-3 border">Kontakt</span> --}}
             <div class="w-full h-[300px] lg:h-[600px] flex justify-center items-center bg-black bg-opacity-70">
-                <h2 class="lg:text-7xl md:text-4xl text-4xl text-white font-bold text-center pb-10 pt-3">Hur kan vi
-                    hjälpa dig?
+                <h2 class="lg:text-7xl md:text-4xl text-4xl text-white font-bold text-center pb-10 pt-3">{{ __('contact.banner_heading') }}
                 </h2>
             </div>
         </div>
