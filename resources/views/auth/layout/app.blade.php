@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home-Rent</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="{{ setting('site_favicon') != null ? Storage::url(setting('site_favicon')) : '' }}"
+    type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 	<title>@stack('title')</title>
     <link rel="stylesheet" href="{{asset('front/src/style.css')}}">
-    @stack('style')
+    @stack('style') 
 </head>
 <body>
     <!-- flex justify-center items-center h-screen  -->

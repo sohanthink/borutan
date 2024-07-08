@@ -17,7 +17,7 @@
         <a href="{{ route('user.apartment.create') }}">
             <div class="parent-icon"><i class="bx bx-buildings"></i>
             </div>
-            <div class="menu-title">Hyresprofil</div>
+            <div class="menu-title">{{__('user/menu.rentalprofile')}}</div>
         </a>
     </li>
     {{-- <li class="{{request()->is('user/invoice*')?'mm-active':''}}">
@@ -38,7 +38,7 @@
         <a href="{{ route('user.profile.index') }}">
             <div class="parent-icon"><i class="bx bx-user-circle"></i>
             </div>
-            <div class="menu-title">Profil</div>
+            <div class="menu-title">{{__('user/menu.profile')}}</div>
         </a>
     </li>
     <li>
@@ -54,7 +54,7 @@
 
 
             </div>
-            <div class="menu-title">Medlemskap</div>
+            <div class="menu-title">{{__('user/menu.Membership')}}</div>
         </a>
     </li>
 
@@ -63,7 +63,7 @@
             <div class="parent-icon">
                 <i class="bx bx-package"></i>
             </div>
-            <div class="menu-title">Aktif Paket</div>
+            <div class="menu-title">{{__('user/menu.active_package')}}</div>
         </a>
     </li>
 
@@ -95,7 +95,7 @@
 
 
             </div>
-            <div class="menu-title">Kontakt</div>
+            <div class="menu-title">{{__('user/menu.contact')}}</div>
         </a>
     </li>
     @if (Session::has('orig_user'))
