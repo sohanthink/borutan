@@ -9,4 +9,5 @@ return[
     'Medlemskap'=>'Membership',
     'active_package'=>'Aktif Paket',
     'contact'=>'Kontakt'
+    
 ];

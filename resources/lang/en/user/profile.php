@@ -1,0 +1,21 @@
+<?php
+return[
+    'my_profile'=>"My profile",
+    'email'=>"Email",
+    'profile_info'=>"Profile Information",
+    'first_name' => "First name",
+    'last_name' => "Last name",
+    'confirm_password' => "Confirm password",
+    'phone_number' => "Phone Number",
+    'address' => "Address",
+    'city' => "City",
+    'save' => "Save",
+    'cancel' => "Cancel",
+    'old_password'=>"Old Password",
+    'change_password'=>"Change your password",
+    'password'=>"Current Password",
+    "package_name"=>"Package name",
+    'package_proposals'=>"Package proposals",
+    'package_price'=>"Package price",
+    'package_desc'=>"Package description",
+];
