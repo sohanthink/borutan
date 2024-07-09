@@ -43,7 +43,7 @@ class VerifyNotification extends Notification
     {
         return (new \Illuminate\Notifications\Messages\MailMessage)
         ->subject('Verify Your Email Address')
-        ->line('Please click the button below to verify your email address. dddddddddddddddddddd')
+        ->line('Please click the button below to verify your email address. ')
         ->action('Verify Email', $this->verificationUrl($notifiable))
         ->line('If you did not create an account, no further action is required.');
     }

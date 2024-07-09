@@ -48,18 +48,18 @@
                             </li> --}}
                             @isset(auth()->user()->package)
                                 <li class="nav-item mx-2 ">
-                                    Paketnamn : <span class="badge bg-primary">{{ auth()->user()->package->name }}</span>
+                                   {{__('user/menu.package_name')}} <span class="badge bg-primary">{{ auth()->user()->package->name }}</span>
                                 </li>
                             @endisset
                             @isset(auth()->user()->expire_date)
                                 <li class="nav-item mx-2">
-                                    Expire date :
+                                    {{__('user/menu.expire_date')}}
                                     <span
                                         class="badge bg-info">{{ \Carbon\Carbon::parse(auth()->user()->expire_date)->format('Y-m-d') }}</span>
                                 </li>
                             @endisset
                             <li class="nav-item mx-2">
-                                Återstående förslag :
+                               {{__('user/menu.proposals')}}
                                 <span
                                     class="badge bg-primary">{{ auth()->user()->contract ? auth()->user()->contract : 0 }}</span>
                             </li>
@@ -117,7 +117,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="{{ route('user.profile.index') }}"><i
-                                        class="bx bx-user"></i><span>Profil</span></a>
+                                        class="bx bx-user"></i><span>{{__('user/menu.profile')}}</span></a>
                             </li>
                             <li>
                                 <div class="dropdown-divider mb-0"></div>
@@ -125,7 +125,7 @@
                             <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i
-                                        class='bx bx-log-out-circle'></i><span>Logga ut</span></a>
+                                        class='bx bx-log-out-circle'></i><span>{{__('user/menu.logout')}}</span></a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>

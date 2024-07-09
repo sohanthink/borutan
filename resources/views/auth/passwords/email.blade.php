@@ -6,7 +6,7 @@
             class="shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] rounded-[30px] md:rounded-[36px] bg-[#FAFAFA] overflow-hidden border-[1px] border-gray-200 w-full md:w-[500px] mx-auto p-10 ">
             <div class="">
                 <div class="text-center">
-                    <h1 class="text-3xl font-semibold text-gray-900"> Återställ mitt lösenord</h1>
+                    <h1 class="text-3xl font-semibold text-gray-900">{{__('front/auth.reset_password')}}</h1>
                 </div>
                 <div class="mt-5 ">
                     <form method="POST" action="{{ route('password.email') }}" class="p-0 ">
@@ -15,7 +15,7 @@
                             <div class="card- p-3">
                                 @if (session('success'))
                                     <div class="alert alert-success" role="alert">
-                                        Vi har mejlat din länk för att återställa ditt lösenord!
+                                        {{__('front/auth.reset_email_sent')}}
                                     </div>
                                 @endif
                                 <div class="relative mt-6">
@@ -31,7 +31,7 @@
                                 <div class="my-6">
                                     <button type="submit"
                                         class="w-full rounded-md bg-black px-3 py-4 text-white focus:bg-gray-600 focus:outline-none">
-                                        Skicka länk för att återställa lösenord
+                                        
                                     </button>
                                 </div>
                             </div>

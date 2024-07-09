@@ -7,8 +7,8 @@
                 <ol class="breadcrumb mb-0 p-0">
                     {{-- <li class="breadcrumb-item"><a href="{{ route('user.dashboard') }}"><i class="bx bx-home-alt"></i></a>
                     </li> --}}
-                    <li class="breadcrumb-item active" aria-current="page">Profil</li>
-                    <li class="breadcrumb-item active" aria-current="page">Min profil</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{__('user/menu.profile')}}</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{__('user/profile.my_profile')}}</li>
                 </ol>
             </nav>
         </div>
@@ -49,7 +49,7 @@
                                 <img src="{{ auth()->user()->image ? asset('uploads/user/' . auth()->user()->image) : asset('default.webp') }}"
                                     alt="" class="my-3" id="preview" style="width: 100%;height: auto;" />
                             </label>
-                            <button class="btn btn-primary btn-sm d-block mt-3" id="image_upload">Spara</button>
+                            <button class="btn btn-primary btn-sm d-block mt-3" id="image_upload">{{__('user/profile.save')}}</button>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
             <div class="card border-top border-0 border-primary p-4">
                 <div class="card-header d-flex justify-content-between">
                     <div class="header-title">
-                        <h4 class="mb-0 text-dark">Profilinformation</h4>
+                        <h4 class="mb-0 text-dark">{{__('user/profile.profile_info')}}</h4>
                     </div>
                 </div>
                 <div class="card-body">
@@ -67,37 +67,37 @@
                         @csrf
                         @method('put')
                         <div class="form-group mt-2">
-                            <label class="form-label" for="first_name">Förnamn</label>
+                            <label class="form-label" for="first_name">{{__('user/profile.first_name')}}</label>
                             <input type="text" name="first_name" class="form-control" id="first_name"
                                 value="{{ Auth::user()->first_name }}">
                         </div>
                         <div class="form-group mt-2">
-                            <label class="form-label" for="last_name">Efternamn</label>
+                            <label class="form-label" for="last_name">{{__('user/profile.last_name')}}</label>
                             <input type="text" name="last_name" class="form-control" id="last_name"
                                 value="{{ Auth::user()->last_name }}">
                         </div>
                         <div class="form-group mt-2">
-                            <label class="form-label" for="email">E-post</label>
+                            <label class="form-label" for="email">{{__('user/profile.email')}}</label>
                             <input type="email" name="email" class="form-control" id="email"
                                 value="{{ Auth::user()->email }}">
                         </div>
                         <div class="form-group mt-2">
-                            <label class="form-label" for="number">Telefonnummer</label>
+                            <label class="form-label" for="number">{{__('user/profile.phone_number')}}</label>
                             <input type="text" name="number" class="form-control" id="number"
                                 value="{{ Auth::user()->number }}">
                         </div>
                         <div class="form-group mt-2">
-                            <label class="form-label" for="address">Adress</label>
+                            <label class="form-label" for="address">{{__('user/profile.address')}}</label>
                             <input type="text" name="address" class="form-control" id="address"
                                 value="{{ Auth::user()->address }}">
                         </div>
                         <div class="form-group mt-2">
-                            <label class="form-label" for="city">Stad</label>
+                            <label class="form-label" for="city">{{__('user/profile.city')}}</label>
                             <input type="text" name="city" class="form-control" id="city"
                                 value="{{ Auth::user()->city }}">
                         </div>
-                        <button type="submit" class="btn btn-primary mt-3">Spara</button>
-                        <a href="{{ route('admin.dashboard') }}" class="btn btn-dark mt-3">Avbryt</a>
+                        <button type="submit" class="btn btn-primary mt-3">{{__('user/profile.save')}}</button>
+                        <a href="{{ route('admin.dashboard') }}" class="btn btn-dark mt-3">{{__('user/profile.cancel')}}</a>
                     </form>
                 </div>
             </div>
@@ -107,24 +107,24 @@
                     @method('put')
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
-                            <h4 class="card-title">Ändra ditt lösenord</h4>
+                            <h4 class="card-title">{{__('user/profile.change_password')}}</h4>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="form-group mt-2">
-                            <label class="form-label" for="pwd">Gammalt lösenord</label>
+                            <label class="form-label" for="pwd">{{__('user/profile.old_password')}}</label>
                             <input type="password" class="form-control" name="old_password" id="pwd">
                         </div>
                         <div class="form-group mt-2">
-                            <label class="form-label" for="pwd">Nytt lösenord</label>
+                            <label class="form-label" for="pwd">{{__('user/profile.password')}}</label>
                             <input type="password" class="form-control" name="password" id="pwd">
                         </div>
                         <div class="form-group mt-2">
-                            <label class="form-label" for="pwd">Bekräfta lösenord </label>
+                            <label class="form-label" for="pwd">{{__('user/profile.confirm_password')}}</label>
                             <input type="password" class="form-control" name="password_confirmation" id="pwd">
                         </div>
-                        <button type="submit" class="btn btn-primary mt-3">Spara</button>
-                        <a href="{{ route('user.dashboard') }}" class="btn btn-dark mt-3">Avbryt</a>
+                        <button type="submit" class="btn btn-primary mt-3">{{__('user/profile.save')}}</button>
+                        <a href="{{ route('user.dashboard') }}" class="btn btn-dark mt-3">{{__('user/profile.cancel')}}</a>
                 </form>
             </div>
         </div>

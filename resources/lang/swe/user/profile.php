@@ -1,0 +1,20 @@
+<?php
+return[
+    'my_profile'=>"Min profil",
+    'email'=>"E-post",
+    'profile_info'=>"Profilinformation",
+    'first_name' => "Förnamn",
+    'last_name' => "Efternamn",
+    'confirm_password' => "Confirm password",
+    'phone_number' => "Telefonnummer",
+    'address' => "Adress",
+    'city' => "Stad",
+    'save' => "Spara",
+    'cancel' => "Avbryt",
+    'password'=>"Gammalt lösenord",
+    "change_password"=>"Ändra ditt lösenord",
+    "package_name "=>"Paket Paket ismi",
+    'package_proposals'=>"Paket Sözleşmesi",
+    'package_price'=>"Paket fiyatı",
+    'package_desc'=>"Paket açıklaması",
+];

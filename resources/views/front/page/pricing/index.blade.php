@@ -3,17 +3,16 @@
     Pricing
 @endpush
 @section('body')
-    <section>
-        <div class="space-y-5 md:px-8 md:py-12 font-primary p-3 md:p-0 md:w-4/6 mx-auto" id="pricing">
-
-
-            <p
-                class="lg:text-7xl md:text-4xl text-3xl text-gray-800 font-bold text-center leading-10 md:px-10 pb-5 md:pb-10">
-                Priset för att hitta ditt hem</p>
-            <span class=" justify-center pb-2 text-center hidden md:block">Prissättning för dig som vill ha en
-                hyresrätt.</span>
-            <span class="flex justify-center pb-2 text-center md:hidden">Prissättning för dig som vill<br> ha en
-                hyresrätt.</span>
+<section>
+    <div class="space-y-5 px-4 py-12 md:py-20 font-primary w-full md:w-4/6 mx-auto" id="pricing">
+        <p
+            class="lg:text-7xl md:text-4xl text-2xl text-gray-800 font-bold text-center leading-10 px-10 pb-4 hidden md:block">
+            {{__('front/home.price_head')}}</p>
+        <p
+            class="lg:text-7xl md:text-4xl text-2xl text-gray-800 font-bold text-center leading-10 px-10 pb-4 md:hidden">
+            {{__('front/home.price_head_1st')}}<br> {{__('front/home.price_head_end')}}</p>
+        <span class=" justify-center pb-2 text-center hidden md:block">{{__('front/home.price_sub_head')}}</p></span>
+        <span class="flex justify-center pb-2 text-center md:hidden">{{__('front/home.price_sub_head_1st')}}<br>{{__('front/home.price_sub_head_end')}}</span>
 
             <div class="demo-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 md:gap-3 lg:gap-5 gap-2">
                 <!-- premium package -->
@@ -25,13 +24,13 @@
                                 <div class="flex justify-between flex-col">
                                     <div class="text-xl md:text-2xl font-bold text-gray-900 flex justify-between">
                                         <span>{{ $package[1]->name }}</span>
-                                        <span class="bg-[#9628fd] text-sm rounded-xl text-white p-2">Populärst</span>
+                                        <span class="bg-[#9628fd] text-sm rounded-xl text-white p-2">{{__('front/home.most_popular')}}</span>
                                     </div>
                                     <div class="pt-5 text-gray-500 font-medium text-base space-y-1">
                                         <div class="flex items-center align-bottom"><span class="pt-1.5">NOK</span>
                                             <div class="ml-1 mr-2 text-2xl md:text-3xl font-bold text-gray-900">
                                                 <span>{{ $package[1]->price }}</span>
-                                            </div><span class="pt-1.5">per månad</span>
+                                            </div><span class="pt-1.5">{{__('front/home.per_month')}}</span>
                                         </div>
                                     </div>
                                     <div class="">
@@ -44,7 +43,7 @@
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                         stroke-linejoin="round"></path>
                                                 </svg>
-                                                <span>24/7 personlig service </span>
+                                                <span>24/7 {{__('front/home.personal_service')}} </span>
                                             </li>
                                             <li class="flex items-center font-medium space-x-2 text-black">
                                                 <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"
@@ -53,7 +52,7 @@
                                                         d="M16.4444 3.03947C15.1056 2.37412 13.5965 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.6244 21.9793 11.2537 21.939 10.8889M9 11L12 14L22 4"
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                         stroke-linejoin="round"></path>
-                                                </svg><span>Få {{ $package[1]->contract }} hyreskontraktsförslag </span>
+                                                </svg><span>{{__('front/home.get')}} {{ $package[1]->contract }} {{__('front/home.rental_contract')}} </span>
                                             </li>
                                             <li class="flex items-center font-medium space-x-2 text-black">
                                                 <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"
@@ -62,7 +61,7 @@
                                                         d="M16.4444 3.03947C15.1056 2.37412 13.5965 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.6244 21.9793 11.2537 21.939 10.8889M9 11L12 14L22 4"
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                         stroke-linejoin="round"></path>
-                                                </svg><span>Pengarna tillbaka garanti</span>
+                                                </svg><span>{{__('front/home.money_back')}}</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -88,7 +87,7 @@
                                         <a href="{{ route('user.invoice.buy', $package[1]->id) }}"
                                             type="button"
                                             class="appearance-none inline-flex hover:shadow-2xl transition-all duration-300 hover:scale-105 items-center group space-x-2.5 bg-black text-white py-4 px-5 rounded-2xl cursor-pointer"><span
-                                                class="w-full font-semibold text-base">Välj {{ $package[1]->name }}</span>
+                                                class="w-full font-semibold text-base">{{__('front/home.välj')}} {{ $package[1]->name }}</span>
                                             <svg class="inline-block h-6" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3 12.4999H21L14 19.4999M14 5.5L18 9.5" stroke="currentColor"
@@ -100,7 +99,7 @@
                                     <a href=" {{ route('register') }}?package={{ $package[1]->id }} "
                                         type="button"
                                         class="appearance-none inline-flex hover:shadow-2xl transition-all duration-300 hover:scale-105 items-center group space-x-2.5 bg-black text-white py-4 px-5 rounded-2xl cursor-pointer"><span
-                                            class="w-full font-semibold text-base">Välj {{ $package[1]->name }}</span>
+                                            class="w-full font-semibold text-base">{{__('front/home.välj')}} {{ $package[1]->name }}</span>
                                         <svg class="inline-block h-6" viewBox="0 0 24 25" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3 12.4999H21L14 19.4999M14 5.5L18 9.5" stroke="currentColor"
@@ -143,7 +142,7 @@
                                         <div class="flex items-center align-bottom"><span class="pt-1.5">NOK</span>
                                             <div class="ml-1 mr-2 text-2xl md:text-3xl font-bold text-gray-900">
                                                 <span>{{ $package[0]->price }}</span>
-                                            </div><span class="pt-1.5">per månad</span>
+                                            </div><span class="pt-1.5">{{__('front/home.per_month')}}</span>
                                         </div>
                                     </div>
                                     <div class="">
@@ -156,7 +155,7 @@
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                         stroke-linejoin="round"></path>
                                                 </svg>
-                                                <span>24/7 personlig service </span>
+                                                <span>24/7 {{__('front/home.personal_service')}}</span>
                                             </li>
 
 
@@ -168,7 +167,7 @@
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                         stroke-linejoin="round"></path>
                                                 </svg>
-                                                <span>Få {{ $package[0]->contract }} hyreskontraktsförslag </span>
+                                                <span>{{__('front/home.get')}} {{ $package[0]->contract }} {{__('front/home.rental_contract')}} </span>
                                             </li>
                                             <li class="flex items-center font-medium space-x-2 text-black">
                                                 <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"
@@ -177,13 +176,12 @@
                                                         d="M16.4444 3.03947C15.1056 2.37412 13.5965 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.6244 21.9793 11.2537 21.939 10.8889M9 11L12 14L22 4"
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                         stroke-linejoin="round"></path>
-                                                </svg><span>Pengarna tillbaka garanti</span>
+                                                </svg><span>{{__('front/home.money_back')}}</span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="pt-2">
-                                    
                                     @auth
                                         @php
                                             $subscription = App\Models\Subscription::where('user_id', auth()->id())->where('status', 'Active')->first();
@@ -203,7 +201,7 @@
                                      <a href="{{ route('user.invoice.buy', $package[0]->id) }}"
                                             type="button"
                                             class="appearance-none inline-flex hover:shadow-2xl transition-all duration-300 hover:scale-105 items-center group space-x-2.5 bg-black text-white py-4 px-5 rounded-2xl cursor-pointer"><span
-                                                class="w-full font-semibold text-base">Välj {{ $package[0]->name }}</span>
+                                                class="w-full font-semibold text-base">{{__('front/home.välj')}} {{ $package[0]->name }}</span>
                                             <svg class="inline-block h-6" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3 12.4999H21L14 19.4999M14 5.5L18 9.5" stroke="currentColor"
@@ -216,7 +214,7 @@
                                     <a href="{{ route('register') }}?package={{ $package[0]->id }}"
                                             type="button"
                                             class="appearance-none inline-flex hover:shadow-2xl transition-all duration-300 hover:scale-105 items-center group space-x-2.5 bg-black text-white py-4 px-5 rounded-2xl cursor-pointer"><span
-                                                class="w-full font-semibold text-base">Välj {{ $package[0]->name }}</span>
+                                                class="w-full font-semibold text-base">{{__('front/home.välj')}} {{ $package[0]->name }}</span>
                                             <svg class="inline-block h-6" viewBox="0 0 24 25" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3 12.4999H21L14 19.4999M14 5.5L18 9.5" stroke="currentColor"
@@ -230,16 +228,16 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- faq page started from here -->
     <section id="faq">
         <div class="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
             <div class="flex flex-col text-left basis-1/2">
-                <p class="inline-block font-semibold text-primary mb-4 text-center md:text-left">Vanliga frågor om BoRutan
+                <p class="inline-block font-semibold text-primary mb-4 text-center md:text-left">{{__('front/home.frequently_questions')}}
                 </p>
-                <p class="sm:text-4xl text-3xl font-extrabold text-base-content text-center md:text-left">Frågor och svar
+                <p class="sm:text-4xl text-3xl font-extrabold text-base-content text-center md:text-left">{{__('front/home.frequently_questions_head')}}
                 </p>
             </div>
             <ul class="basis-1/2">
@@ -247,7 +245,7 @@
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">Vad är BoRutan?</span>
+                        <span class="flex-1 text-base-content">{{__('front/home.ques_1')}}</span>
                         <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect y="7" width="16" height="2" rx="1"
@@ -259,13 +257,7 @@
                     <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
                         style="transition: max-height 0.3s ease-in-out 0s;">
                         <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">Med hjälp av vårt dedikerade team och avancerad
-                                AI-teknologi tar BoRutan hand om hela processen med att hitta din perfekta hyresrätt åt våra
-                                medlemmar. Vi sköter allt från att söka efter lägenheter, att kontakta hyresvärdar och att
-                                vara vid din sida under avtalsprocessen. När vi hittar en lägenhet som matchar dina
-                                kriterier, kontaktar vi dig för att avtala om visning eller kontraktsskrivning. På så sätt
-                                frigörs din värdefulla tid så att du kan fokusera på att göra roliga och meningsfulla saker
-                                medan vi tar hand om resten.</div>
+                            <div class="space-y-2 leading-relaxed">{{__('front/home.ans_1')}}</div>
                         </div>
                     </div>
                 </li>
@@ -273,7 +265,7 @@
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">När kan jag få en hyresrätt?</span>
+                        <span class="flex-1 text-base-content">{{__('front/home.ques_2')}}</span>
                         <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect y="7" width="16" height="2" rx="1"
@@ -285,9 +277,7 @@
                     <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
                         style="transition: max-height 0.3s ease-in-out 0s;">
                         <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">I genomsnitt har det tagit 6-9 månader för en medlem att
-                                säkra en hyresrätt efter deras medlemskap hos BoRutan, men det beror på olika faktorer som
-                                var medlemmen söker en bostad i Sverige.</div>
+                            <div class="space-y-2 leading-relaxed">{{__('front/home.ans_2')}}</div>
                         </div>
                     </div>
                 </li>
@@ -295,7 +285,7 @@
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">Är medlemmar garanterade en hyresrätt?</span>
+                        <span class="flex-1 text-base-content">{{__('front/home.ques_3')}}</span>
                         <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect y="7" width="16" height="2" rx="1"
@@ -307,8 +297,7 @@
                     <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
                         style="transition: max-height 0.3s ease-in-out 0s;">
                         <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">Ja, om vi inte hittar en lägenhet inom 12 månader enligt
-                                dina kriterier, återbetalar vi det du har betalat till BoRutan under dessa 12 månader.</div>
+                            <div class="space-y-2 leading-relaxed">{{__('front/home.ans_3')}}</div>
                         </div>
                     </div>
                 </li>
@@ -316,7 +305,7 @@
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">Hur fungerar BoRutans AI?</span>
+                        <span class="flex-1 text-base-content">{{__('front/home.ques_4')}}</span>
                         <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect y="7" width="16" height="2" rx="1"
@@ -328,12 +317,7 @@
                     <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
                         style="transition: max-height 0.3s ease-in-out 0s;">
                         <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">Identifiera och förstå mönster och preferenser hos både
-                                hyresgäster och hyresvärdar. Liksom andra AI-system använder BoRutan avancerade algoritmer
-                                och maskininlärningstekniker för att effektivt sortera och matcha lämpliga bostäder med
-                                potentiella hyresgäster. BoRutan söker igenom alla tillgängliga system för att hitta
-                                lämpliga hyresvärdar och bostäder som matchar medlemmarnas kriterier, vilket resulterar i en
-                                smidig och effektiv matchningsprocess.</div>
+                            <div class="space-y-2 leading-relaxed">{{__('front/home.ans_4')}}</div>
                         </div>
                     </div>
                 </li>
@@ -341,7 +325,7 @@
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">Hur kan BoRutan garantera en hyresrätt?</span>
+                        <span class="flex-1 text-base-content">{{__('front/home.ques_5')}}</span>
                         <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect y="7" width="16" height="2" rx="1"
@@ -353,12 +337,7 @@
                     <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
                         style="transition: max-height 0.3s ease-in-out 0s;">
                         <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">Nästan 90% av våra medlemmar har fått en hyresrätt tack
-                                vare vårt ambitiösa team, vår teknologi och våra partners. Vi strävar efter att ha färre
-                                medlemmar, men att säkerställa så många bostäder som möjligt åt dem. Vi sätter stor vikt vid
-                                kvalitet framför kvantitet och vår inkomst kommer också från våra API-lösningar gentemot
-                                större partners och plattformar. Dessutom tar vi ut en avgift från hyresvärdar, partners och
-                                större marknadsplatser för att effektivt och smidigt hitta de bästa hyresgästerna.</div>
+                            <div class="space-y-2 leading-relaxed">{{__('front/home.ans_5')}}</div>
                         </div>
                     </div>
                 </li>
@@ -366,8 +345,7 @@
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">Hur kontaktar ni mig när ni hittar en bostad enligt mina
-                            kriterier?</span>
+                        <span class="flex-1 text-base-content">{{__('front/home.ques_6')}}</span>
                         <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect y="7" width="16" height="2" rx="1"
@@ -379,10 +357,7 @@
                     <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
                         style="transition: max-height 0.3s ease-in-out 0s;">
                         <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">Vi kontaktar dig vanligtvis via e-post eller telefon,
-                                antingen genom ett samtal eller ett sms, när vi hittar en bostad som matchar dina kriterier.
-                                Det är viktigt att se till att dina kontaktuppgifter är uppdaterade så att vi kan nå dig så
-                                snabbt som möjligt när vi har en lämplig bostad att erbjuda.</div>
+                            <div class="space-y-2 leading-relaxed">{{__('front/home.ans_6')}}</div>
                         </div>
                     </div>
                 </li>
@@ -390,8 +365,7 @@
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">Vad är skillnaden mellan Bas- och ert
-                            Prio-medlemskap?</span>
+                        <span class="flex-1 text-base-content">{{__('front/home.ques_7')}}</span>
                         <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect y="7" width="16" height="2" rx="1"
@@ -403,9 +377,7 @@
                     <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
                         style="transition: max-height 0.3s ease-in-out 0s;">
                         <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">Enda skillnaden är att med Basmedlemskapet får du ett
-                                garanterat hyreskontraktsförslag efter dina kriterier, till skillnad från Prio där du får
-                                tre hyreskontraktsförslag under 12 månader.</div>
+                            <div class="space-y-2 leading-relaxed">{{__('front/home.ans_7')}}</div>
                         </div>
                     </div>
                 </li>
@@ -413,8 +385,7 @@
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">Vad händer om jag tackar nej till alla bostadsförslag från
-                            BoRutan?</span>
+                        <span class="flex-1 text-base-content">{{__('front/home.ques_8')}}</span>
                         <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect y="7" width="16" height="2" rx="1"
@@ -426,10 +397,7 @@
                     <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
                         style="transition: max-height 0.3s ease-in-out 0s;">
                         <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">Om du är Basmedlem får du ett hyresrättsförslag, och som
-                                Priomedlem får du tre under en period på 12 månader. Om du tackar nej kan det ta ytterligare
-                                12 månader innan du får nya förslag. Är du kräsen rekommenderar vi att du blir Priomedlem
-                                för att få fler alternativ tillsammans.</div>
+                            <div class="space-y-2 leading-relaxed">{{__('front/home.ans_8')}}</div>
                         </div>
                     </div>
                 </li>
@@ -437,7 +405,7 @@
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">Kan jag säga upp mitt medlemskap?</span>
+                        <span class="flex-1 text-base-content">{{__('front/home.ques_9')}}</span>
                         <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect y="7" width="16" height="2" rx="1"
@@ -449,10 +417,11 @@
                     <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
                         style="transition: max-height 0.3s ease-in-out 0s;">
                         <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">Ja, du kan när som helst säga upp ditt medlemskap.</div>
+                            <div class="space-y-2 leading-relaxed">{{__('front/home.ans_9')}}</div>
                         </div>
                     </div>
                 </li>
+
             </ul>
         </div>
 

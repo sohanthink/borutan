@@ -25,13 +25,13 @@
 @endpush
 @section('content')
     <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        <div class="breadcrumb-title pe-3">Hyresprofil</div>
+        <div class="breadcrumb-title pe-3">{{__('user/rental.rentalprofile')}}</div>
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
                     <li class="breadcrumb-item"><a href="{{ route('user.dashboard') }}"><i class="bx bx-home-alt"></i></a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Lägenhet</li>
+                    <li class="breadcrumb-item active" aria-current="page">{{__('user/rental.apartment')}}</li>
                 </ol>
             </nav>
         </div>
@@ -42,7 +42,7 @@
             <div class="col-md-8 mx-auto">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <h3>Hyresprofil</h3>
+                        <h3>{{__('user/rental.rentalprofile')}}</h3>
                         {{-- <a class="btn btn-primary" href="{{ route('user.apartment.index') }}">Back</a> --}}
                     </div>
                     <div class="card-body">
@@ -50,28 +50,28 @@
                             @csrf
                             <div class="mb-3 my-5">
                                 <label for="formFileMultiple" class="form-label">
-                                    <h5>Typ av hyreskontrakt </h5>
+                                    <h5>{{__('user/rental.apartmenttype')}}</h5>
                                 </label> <br>
-                                <small>Vilken typ av hyreskontrakt är du intresserad av?</small>
+                                <small>{{__('user/rental.apartmenttypeinterested')}}</small>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" value="1" name="type"
                                         id="first">
                                     <label class="form-check-label" for="first">
-                                        Förstahandskontrakt
+                                        {{__('user/rental.first_hand_lease')}}
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="type" value="2"
                                         id="sub">
                                     <label class="form-check-label" for="sub">
-                                        Andrahandskontrakt
+                                        {{__('user/rental.second_hand_lease')}}
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" value="3" name="type"
                                         id="all" checked>
                                     <label class="form-check-label" for="all">
-                                        Alla
+                                        {{__('user/rental.all_lease')}}
                                     </label>
                                 </div>
 
@@ -79,9 +79,9 @@
                             </div>
                             <div class="mb-3 my-5">
                                 <label for="formFileMultiple" class="form-label">
-                                    <h5>Antal rum</h5>
+                                    <h5>{{__('user/rental.room_number')}}</h5>
                                 </label> <br>
-                                <small>Ange önskat minsta antal rum.</small>
+                                <small>{{__('user/rental.minimum_rooms')}}</small>
                                 <div class="range-wrap">
                                     <input type="range" name="room" class="range" min="1" max="6"
                                         value="1">
@@ -90,9 +90,9 @@
                             </div>
                             <div class="mb-3 my-5">
                                 <label for="formFileMultiple" class="form-label">
-                                    <h5>Rumsstorlek (kvm)</h5>
+                                    <h5>{{__('user/rental.room_size')}}</h5>
                                 </label> <br>
-                                <small>Ange minsta antal kvadratmeter.</small>
+                                <small>{{__('user/rental.minimum_area')}}</small>
                                 <div class="range-wrap">
                                     <input type="range" name="size" class="range" min="10" max="289"
                                         value="20">
@@ -101,9 +101,9 @@
                             </div>
                             <div class="mb-3 my-5">
                                 <label for="formFileMultiple" class="form-label">
-                                    <h5>Hyra</h5>
+                                    <h5>{{__('user/rental.rent')}}</h5>
                                 </label> <br>
-                                <small>Ange maximal hyra (KR).</small>
+                                <small>{{__('user/rental.maximum_rent')}}</small>
                                 <div class="range-wrap">
                                     <input type="range" name="rent" class="range" min="5000" max="30000"
                                         value="10000">
@@ -112,9 +112,9 @@
                             </div>
                             <div class="mb-3 my-5">
                                 <label for="location" class="form-label">
-                                    <h5>Stad </h5>
+                                    <h5>{{__('user/rental.city')}} </h5>
                                 </label> <br>
-                                <small>Ange din stad för din hyreslägenhet</small>
+                                <small>{{__('user/rental.city_rental')}}</small>
                                 <select name="location[]" id="location" class="location form-control" multiple>
                                     @foreach ($areas as $area)
                                         <option value="{{ $area->name }}">{{ $area->name }}</option>

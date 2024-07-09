@@ -26,10 +26,10 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
-                        <li class="list-group-item">Paket ismi : {{auth()->user()->package?auth()->user()->package->name:''}}</li>
-                        <li class="list-group-item">Paket Sözleşmesi : {{auth()->user()->package?auth()->user()->package->contract:''}}</li>
-                        <li class="list-group-item">Paket fiyatı : {{auth()->user()->package?auth()->user()->package->price:''}}</li>
-                        <li class="list-group-item">paket açıklaması : {{auth()->user()->package?auth()->user()->package->description:''}}</li>
+                        <li class="list-group-item">{{__('user/profile.package_name')}} : {{auth()->user()->package?auth()->user()->package->name:''}}</li>
+                        <li class="list-group-item">{{__('user/profile.package_proposals')}} : {{auth()->user()->package?auth()->user()->package->contract:''}}</li>
+                        <li class="list-group-item">{{__('user/profile.package_price')}} : {{auth()->user()->package?auth()->user()->package->price:''}}</li>
+                        <li class="list-group-item">{{__('user/profile.package_desc')}} : {{auth()->user()->package?auth()->user()->package->description:''}}</li>
                     </ul>
                 </div>
             </div>
