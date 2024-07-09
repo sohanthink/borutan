@@ -37,7 +37,7 @@
             <ul class="flex gap-8 justify-center font-medium">
                 <li class="{{ request()->is('/') ? 'active' : '' }} whitespace-nowrap"><a
                         href="{{ route('index') }}">{{__('front/common.home')}}</a></li>
-                <li class="whitespace-nowrap"><a href="{{ url('/') }}#about">{{__('front/common.home')}}</a></li>
+                <li class="whitespace-nowrap"><a href="{{ url('/') }}#about">{{__('front/common.about')}}</a></li>
                 <li class="whitespace-nowrap"><a href="{{ url('/') }}#faq">{{__('front/common.qandans')}}</a></li>
                 <li class="{{ request()->is('pricing') ? 'active' : '' }} whitespace-nowrap"><a
                         href="{{ route('pricing') }}">{{__('front/common.pricing')}}</a></li>
