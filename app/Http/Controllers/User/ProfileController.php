@@ -36,7 +36,7 @@ class ProfileController extends Controller
         ]);
         $imageContent = file_get_contents($request->link);
         if ($imageContent === false) {
-            return response()->json(['error' => 'Failed to fetch image from URL.'], 500);
+            return response()->json(['error' => __('user/alart.fetch_image')], 500);
         }
         $imageName = uniqid() . '_' . basename($request->link). '.png';
         $directory = public_path('uploads/user');
@@ -47,7 +47,7 @@ class ProfileController extends Controller
         $save = file_put_contents($filePath, $imageContent);
         
         if ($save === false) {
-            return response()->json(['error' => 'Failed to save image.'], 500);
+            return response()->json(['error' => ''], 500);
         }
          $user = Auth::user();
          $user->update([

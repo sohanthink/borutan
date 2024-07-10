@@ -82,18 +82,18 @@
             <img src="{{ $message->embed(public_path('storage/' . setting('site_logo'))) }}">
         </div>
         <div class="content">
-            <p>Hej Admin,</p>
-            <p>Du har mottagit ett nytt meddelande från besökaren.</p>
-            <p><strong>Namn:</strong> {{ $contact['name'] }}</p>
-            <p><strong>Email:</strong> {{ $contact['email'] }}</p>
-            <p><strong>Ämne:</strong> {{ $contact['subject'] }}</p>
-            <p><strong>Meddelande:</strong></p>
+            <p>{{__("user/mail.hello")}} Admin,</p>
+            <p>{{__('user/mail.new_message')}}</p>
+            <p><strong>{{__("user/mail.name")}}</strong> {{ $contact['name'] }}</p>
+            <p><strong>{{__("user/mail.email")}}</strong> {{ $contact['email'] }}</p>
+            <p><strong>{{__("user/mail.subject")}}</strong> {{ $contact['subject'] }}</p>
+            <p><strong>{{__("user/mail.message")}}</strong></p>
             <p>{{ $contact['message'] }}</p>
-            <p>Tack för att du valde Borutan!</p>
+            <p>{{__('user/mail.thanks_choosing')}}</p>
         </div>
         <div class="divider"></div>
         <div class="footer">
-            <p>&copy; 2023 Borutan. Alla rättigheter förbehållna.</p>
+            <p>&copy; {{__('user/mail.copyright')}}</p>
         </div>
     </div>
 </body>

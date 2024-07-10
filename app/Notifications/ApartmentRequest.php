@@ -44,7 +44,7 @@ class ApartmentRequest extends Notification
         $user = $this->user;
         return (new MailMessage)
         ->view('email.ApartmentRequest', ['user' => $user])
-        ->subject("Lägenhetsbegäran har skickats");
+        ->subject(__('user/mail.request_sent'));
 
     }
 

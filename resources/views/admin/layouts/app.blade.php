@@ -23,7 +23,7 @@
                 <div>
                     <a href="{{ url('/') }}"><img
                             src="{{ setting('site_logo') != null ? Storage::url(setting('site_logo')) : '' }}"
-                            alt="" width="110"></a>
+                            alt="" style="max-height: 60px;max-width: 110;"></a>
                 </div>
                 <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
                 </div>

@@ -82,11 +82,11 @@ class ApartmentController extends Controller
         
         $user = User::where('id', auth()->id())->first();
         if($user->package_id == null) {
-            return redirect(url()->route('index') . '#pricing')->with('warning', 'Vi hittar din perfekta hyresrätt – garanterat!')->with('title', 'köpa ett paket');
+            return redirect(url()->route('index') . '#pricing')->with('warning', __('user/alart.we_will_find'))->with('title', __('user/alart.package_buy'));
         } elseif ($user->expire_at > Carbon::today()) {
-            return redirect(url()->route('index') . '#pricing')->with('warning','Ditt paket har gått ut!')->with('title', 'köpa ett paket');
+            return redirect(url()->route('index') . '#pricing')->with('warning',__('user/alart.package_expired'))->with('title', __('user/alart.package_buy'));
         }elseif ($user->contract < 1) {
-            return redirect(url()->route('index') . '#pricing')->with('warning', 'Vi hittar din perfekta hyresrätt – garanterat!')->with('title', 'köpa ett paket');
+            return redirect(url()->route('index') . '#pricing')->with('warning', __('user/alart.we_will_find'))->with('title', __('user/alart.package_buy'));
         }
         
       $apartment =   Apartment::create([
@@ -107,7 +107,7 @@ class ApartmentController extends Controller
         User::where('id', auth()->id())->decrement('contract', 1);
         $user->notify(new ApartmentRequest($user));
         $reciver->notify(new ApartmentReqReceived($apartment));
-        return back()->with('success','Förfrågan har skickats!');
+        return back()->with('success',__('user/alart.inquiry_sent'));
         
     }
 

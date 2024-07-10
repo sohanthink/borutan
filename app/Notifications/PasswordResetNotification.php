@@ -44,7 +44,7 @@ class PasswordResetNotification extends Notification
     {
         return (new MailMessage)
         ->view('email.PasswordReset', ['user' => $this->user,'token'=>$this->token])
-        ->subject("Begäran om återställning av lösenord");
+        ->subject(__('user/mail.password_reset_request'));
     }
 
     /**

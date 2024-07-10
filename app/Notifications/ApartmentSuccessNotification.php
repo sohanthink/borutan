@@ -44,7 +44,7 @@ class ApartmentSuccessNotification extends Notification
         $user = $this->user;
         return (new MailMessage)
         ->view('email.ApartmentSuccess', ['user' => $user])
-        ->subject("Lägenhetsbegäran godkänd");
+        ->subject(__('user/mail.request_approved'));
     }
 
     /**
