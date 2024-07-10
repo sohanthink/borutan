@@ -21,7 +21,7 @@
         </div>
         <div class="card-body">
             <div class="card-body">
-                <p><strong>User Name : </strong>{{ $apartment->user?$apartment->user->first_name:'' }}{{ $apartment->user?$apartment->user->last_name:'' }}</p>
+                <p><strong>User Name : </strong>{{ $apartment->user?$apartment->user->first_name:'' }} {{ $apartment->user?$apartment->user->last_name:'' }}</p>
                 <p><strong>Total Room : </strong>{{ $apartment->room }}</p>
                 <p><strong>Room Type: </strong>
                     @if ($apartment->type == 3)

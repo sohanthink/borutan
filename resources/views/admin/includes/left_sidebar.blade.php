@@ -66,12 +66,4 @@
             <div class="menu-title">Settings</div>
         </a>
     </li>
-    <li class="{{request()->is('admin/price-plan*')?'mm-active':''}}">
-        <a href="{{ route('admin.price-plan.index') }}">
-            <div class="parent-icon"><i class="bx bx-cog"></i>
-            </div>
-            <div class="menu-title">Plan</div>
-        </a>
-    </li>
-
 </ul>
