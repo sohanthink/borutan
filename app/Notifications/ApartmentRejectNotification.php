@@ -44,7 +44,7 @@ class ApartmentRejectNotification extends Notification
         $user = $this->user;
         return (new MailMessage)
         ->view('email.ApartmentReject', ['user' => $user])
-        ->subject("Lägenhetsbegäran avslogs");
+        ->subject(__('user/mail.request_declined'));
 
     }
 

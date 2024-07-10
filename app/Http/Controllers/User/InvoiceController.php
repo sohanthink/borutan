@@ -190,7 +190,7 @@ class InvoiceController extends Controller
                 $ReferenceCode = '61399079-17ff-412d-9b02-73cdcc29f2fd';
             }else
             {
-                return redirect()->route('user.apartment.index')->with(['success','Beställ plats framgångsrikt!']);  
+                return redirect()->route('user.apartment.index')->with(['success',__('user/alart.order_placed')]);  
             };
 
             $subscription = new \Iyzipay\Request\Subscription\SubscriptionCreateRequest();
@@ -231,10 +231,10 @@ class InvoiceController extends Controller
                 'status'=>'Active'
             ]);
             
-            return redirect()->route('user.apartment.index')->with(['success','Beställ plats framgångsrikt!']);  
+            return redirect()->route('user.apartment.index')->with(['success',__('user/alart.order_placed')]);  
         } else {
             Log::error('Payment failed: ' . $payment->getErrorMessage());
-            return redirect()->back()->with('warning','Betalning misslyckades: Kortnumret är ogiltigt.')->with('title','Misslyckades');
+            return redirect()->back()->with(__('user/alart.invalid_card'))->with('title',__('user/alart.failed'));
         }
     }
 
@@ -266,10 +266,10 @@ class InvoiceController extends Controller
         $request->setSubscriptionReferenceCode($subscription->reference_code);
         $result = \Iyzipay\Model\Subscription\SubscriptionCancel::cancel($request,$options);
         if ($result->getStatus() == 'success') {
-            return redirect()->route('user.apartment.index')->with(['success','Payment Cancel Successfully!']);  
+            return redirect()->route('user.apartment.index')->with(['success',__('user/alart.payment_cancel')]);  
         }else
         {
-            return redirect()->route('user.apartment.index')->with(['error','Something Is wrong!']);
+            return redirect()->route('user.apartment.index')->with(['error',__('user/alart.something_wrong')]);
         }
     }
 }       

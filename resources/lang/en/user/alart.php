@@ -1,0 +1,21 @@
+<?php
+return[
+    "we_will_find"=>"We will find your perfect rental apartment - guaranteed!",
+    "package_expired"=>"Your package has expired!",
+    "package_buy"=>"To buy a package.",
+    "inquiry_sent"=>"The inquiry has been sent!",
+    "order_placed"=>"Order placed successfully!",
+    "payment_cancel"=>"Payment Cancel Successfully!",
+    "something_wrong"=>"Something Is wrong!",
+    "profile_updated"=>"The profile has been successfully updated!",
+    "failed_image"=>"Failed to save image.",
+    "fetch_image"=>"Failed to fetch image from URL.",
+    "invalid_card" => "Warning: Payment failed: The card number is invalid.",
+    "failed" => "Failed",
+    "incorrect_credentials"=>"Your login credentials are incorrect",
+    "reset_password"=>"We have emailed your link to reset your password!",
+    "excelent"=>"EXCELLENT",
+    "invalid_token"=>"Invalid Token",
+    "change_successful"=>"Password change successful",
+    "done"=>"DONE",
+];

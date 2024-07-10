@@ -83,14 +83,14 @@
             <img src="{{ $message->embed(public_path('storage/' . setting('site_logo'))) }}">
         </div>
         <div class="content">
-            <p>Hallå {{$user->first_name }} {{ $user->last_name}}</p>
-            <p>Din lägenhetsförfrågan har skickats.</p>
-            <p>Vänta ett tag med att granska denna begäran.</p>
-            <p>Tack för att du valde Borutan!</p>
+            <p>{{__("user/mail.hello")}} {{$user->first_name }} {{ $user->last_name}}</p>
+            <p>{{__("user/mail.apartment_request_sent")}}</p>
+            <p>{{__("user/mail.reviewing_request")}}</p>
+            <p>{{__('user/mail.thanks_choosing')}}</p>
         </div>
         <div class="divider"></div>
         <div class="footer">
-            <p>&copy; 2023 Borutan. Alla rättigheter förbehållna.</p>
+            <p>&copy; {{__('user/mail.copyright')}}</p>
         </div>
     </div>
 </body>

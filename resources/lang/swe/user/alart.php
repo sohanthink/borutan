@@ -1,0 +1,21 @@
+<?php
+return[
+    "we_will_find"=>"Vi hittar din perfekta hyresrätt – garanterat!",
+    "package_expired"=>"Ditt paket har gått ut!",
+    "package_buy"=>"köpa ett paket",
+    "inquiry_sent"=>"Förfrågan har skickats!",
+    "order_placed"=>"Beställ plats framgångsrikt!",
+    "payment_cancel"=>"Betalning Avbryt framgångsrikt!",
+    "something_wrong"=>"Något är fel!",
+    "profile_updated"=>"Profilen har uppdaterats framgångsrikt!",
+    "failed_image"=>"Det gick inte att spara bilden.",
+    "fetch_image"=>"Det gick inte att hämta bilden från URL.",
+    "invalid_card" => "warning','Betalning misslyckades: Kortnumret är ogiltigt.",
+    "failed" => "Misslyckades",
+    "incorrect_credentials"=>"Dina inloggningsuppgifter är felaktiga",
+    "reset_password"=>"Vi har mejlat din länk för att återställa ditt lösenord!",
+    "excelent"=>"UTMÄRKT",
+    "invalid_token"=>"Ogiltig token",
+    "change_successful"=>"Lösenordsändringen lyckade",
+    "done"=>"KLART",
+];

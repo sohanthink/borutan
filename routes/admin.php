@@ -75,5 +75,5 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['auth', 'a
 
 
     // price plan route
-    Route::resource('price-plan', PricePlanController::class);
+    // Route::resource('price-plan', PricePlanController::class);
 });

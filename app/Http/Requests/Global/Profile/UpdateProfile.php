@@ -33,6 +33,9 @@ class UpdateProfile extends FormRequest
                 'max:255',
                 Rule::unique('users', 'email')->ignore(auth()->user()->id),
             ],
+            'number'=>'sometimes|numeric|min:9',
+            'address' => 'sometimes|string|max:255',
+            'city' => 'sometimes|string|max:255',
             'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }

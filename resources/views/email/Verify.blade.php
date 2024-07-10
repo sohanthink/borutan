@@ -82,22 +82,21 @@
             <img src="{{ $message->embed(public_path('storage/' . setting('site_logo'))) }}">
         </div>
         <div class="content">
-            <p>Välkommen till Borutan!</p>
-            <p>Klicka på knappen nedan för att verifiera din e-postadress.</p>
+            <p>{{__('user/mail.welcome_borutan')}}</p>
+            <p>{{__("user/mail.verify_your_email")}}</p>
             <div class="button-container">
-                <a href="{{ $url }}" class="button" style="color: white;">Kontrollera</a>
+                <a href="{{ $url }}" class="button" style="color: white;">{{__('user/mail.verify')}}</a>
             </div>
-            <p>Om du inte skapade ett konto krävs ingen ytterligare åtgärd.</p>
+            <p>{{__('user/mail.action_no_needed')}}</p>
             <p>
-                Om du har problem med att klicka på knappen "Verifiera", kopiera och klistra in webbadressen nedan i din
-                webbläsare:
+               {{__('user/mail.trouble_clicking')}}
                 <a href="{{ $url }}">{{ $url }}</a>
             </p>
-            <p>Tack för att du valde Borutan!</p>
+            <p>T{{__('user/mail.thanks_choosing')}}</p>
         </div>
         <div class="divider"></div>
         <div class="footer">
-            <p>&copy; 2023 Borutan. Alla rättigheter förbehållna.</p>
+            <p>&copy; {{__('user/mail.copyright')}}</p>
         </div>
     </div>
 </body>

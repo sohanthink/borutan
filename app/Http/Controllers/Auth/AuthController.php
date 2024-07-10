@@ -58,7 +58,7 @@ class AuthController extends Controller
                     return redirect()->route('user.apartment.create');
                 }
             }else{
-                return redirect()->route('login')->with('warning',"Dina inloggningsuppgifter är felaktiga");
+                return redirect()->route('login')->with('warning',__('user/alart.incorrect_credentials'));
             };
     }
 
@@ -132,7 +132,7 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
         $user->notify(new PasswordResetNotification($user , $token));
 
-        return back()->with('success', "Vi har mejlat din länk för att återställa ditt lösenord!")->with('title','UTMÄRKT');
+        return back()->with('success', __('user/alart.reset_password'))->with('title',__('user/alart.excelent'));
     }
     public function reset_verify(Request $request)
     {
@@ -143,14 +143,14 @@ class AuthController extends Controller
         ]);
 
         if (!$this->isValidToken($request->email, $request->token)) {
-            return back()->with('warning', "Ogiltig token");
+            return back()->with('warning', __('user/alart.invalid_token'));
         }
         $user = User::where('email', $request->email)->first();
         $user->password = Hash::make($request->password);
         $user->save();
         DB::table('password_resets')->where('email', $request->email)->delete();
 
-        return redirect()->route('login')->with('success', "Lösenordsändringen lyckades")->with('title','KLART');
+        return redirect()->route('login')->with('success',__('user/alart.change_successful'))->with('title',__('user/alart.done'));
     }
 
     private function isValidToken($email, $token)

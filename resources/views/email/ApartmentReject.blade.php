@@ -83,17 +83,17 @@
             <img src="{{ $message->embed(public_path('storage/' . setting('site_logo'))) }}">
         </div>
         <div class="content">
-            <p>Hallå {{$user->first_name }} {{ $user->last_name}}</p>
-            <p>Din lägenhetsbegäran avvisades</p>
-            <p>Vänligen försök på ett annat ställe.</p>
+            <p>{{__("user/mail.hello")}} {{$user->first_name }} {{ $user->last_name}}</p>
+            <p>{{__('user/mail.apartment_rejected')}}</p>
+            <p>{{__('user/mail.apartment_try')}}</p>
             <div class="button-container">
-                <a href="{{route('user.apartment.create')}}" class="button"  style="color: white;">Lägenhet</a>
+                <a href="{{route('user.apartment.create')}}" class="button"  style="color: white;">{{__("user/mail.apartment")}}</a>
             </div>
-            <p>Tack för att du valde Borutan!</p>
+            <p>{{__('user/mail.thanks_choosing')}}</p>
         </div>
         <div class="divider"></div>
         <div class="footer">
-            <p>&copy; 2023 Borutan. Alla rättigheter förbehållna.</p>
+            <p>&copy; {{__('user/mail.copyright')}}</p>
         </div>
     </div>
 </body>

@@ -83,22 +83,22 @@
             <img src="{{ $message->embed(public_path('storage/' . setting('site_logo'))) }}">
         </div>
         <div class="content">
-            <p>Återställning av lösenord!</p>
-            <p>Vi är glada över att ha dig som en del av vår plattform. Nedan hittar du länken för att återställa ditt lösenord:</p>
+            <p>{{__('user/mail.password_reset')}}</p>
+            <p>{{__('user/mail.reset_your_password')}}</p>
             <div class="button-container">
-                <a href="{{route('index')}}/password/reset/{{$token}}?email={{$user->email}}" class="button" style="color: white;">Återställ lösenord</a>
+                <a href="{{route('index')}}/password/reset/{{$token}}?email={{$user->email}}" class="button" style="color: white;">{{__('user/mail.reset_password')}}</a>
             </div>
-            <p>Om du inte begärde en lösenordsåterställning, kan du ignorera detta e-postmeddelande.</p>
+            <p>{{__('user/mail.ignore_this_email')}}</p>
             <p>
-                Om du har problem med att klicka på knappen "Återställ lösenord", kopiera och klistra in webbadressen nedan i din webbläsare: 
+                {{__('user/mail.trouble_clicking')}}
                 <a
                     href="{{route('index')}}/password/reset/{{$token}}?email={{$user->email}}">{{route('index')}}/password/reset/{{$token}}?email={{$user->email}}</a>
             </p>
-            <p>Tack för att du valde BoRutan!</p>
+            <p>T{{__('user/mail.thanks_choosing')}}</p>
         </div>
         <div class="divider"></div>
         <div class="footer">
-            <p>&copy; 2023 Borutan. Alla rättigheter förbehållna.</p>
+            <p>&copy; {{__('user/mail.copyright')}}.</p>
         </div>
     </div>
 </body>

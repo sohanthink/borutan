@@ -28,7 +28,7 @@ class ProfileController extends Controller
         $user->address = $request->address;
         $user->city = $request->city;
         $user->save();
-        return back()->with('success','Profilen har uppdaterats framgångsrikt!');
+        return back()->with('success',__('user/alart.profile_updated'));
     }
     
     

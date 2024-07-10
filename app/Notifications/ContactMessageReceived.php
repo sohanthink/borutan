@@ -42,7 +42,7 @@ class ContactMessageReceived extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('Lägenhetsbegäran avslogs')
+                    ->subject(__('user/mail.request_denied'))
                     ->view('email.ContactMessage', [
                         'contact' => $this->contact,
                     ]);

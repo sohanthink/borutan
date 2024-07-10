@@ -42,10 +42,10 @@ class VerifyNotification extends Notification
     public function toMail($notifiable)
     {
         return (new \Illuminate\Notifications\Messages\MailMessage)
-        ->subject('Verify Your Email Address')
-        ->line('Please click the button below to verify your email address. ')
-        ->action('Verify Email', $this->verificationUrl($notifiable))
-        ->line('If you did not create an account, no further action is required.');
+        ->subject(__('user/mail.verify_email'))
+        ->line(__('user/mail.click_button'))
+        ->action(__('user/mail.verify_Email'), $this->verificationUrl($notifiable))
+        ->line(__('user/mail.action_no_needed'));
     }
 
     protected function verificationUrl($notifiable)
