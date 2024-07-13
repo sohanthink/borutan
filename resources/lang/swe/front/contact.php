@@ -6,5 +6,5 @@ return[
 'email'=>"E-post",
 'subject'=>" - Ämne",
 'message'=>" - Meddelande",
-'send'=>"kicka",
+'send'=>"Skicka",
 ];

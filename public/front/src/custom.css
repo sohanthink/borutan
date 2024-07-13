@@ -6,17 +6,43 @@
     border-radius: 50%;
     display: inline-block;
     color: white;
-    background: black;
+    background: #9628fd;
     font-size: 30px;
-   
+   cursor: pointer;
 }
 .recent_slider_right{
-    top:50%;
+    top:-10%;
     transform: translateY(-50%);
     right: 50px;
 }
 .recent_slider_left{
-    top:50%;
+    top:-10%;
     transform: translateY(-50%);
     left: 50px;
+}
+
+@media (max-width: 600px) {
+    .recent_icon {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        display: inline-block;
+        color: white;
+        background: #9628fd;
+        font-size: 30px;
+       
+    }
+    .recent_slider_right{
+        top:50%;
+        transform: translateY(-50%);
+        right: 50px;
+    }
+    .recent_slider_left{
+        top:50%;
+        transform: translateY(-50%);
+        left: 50px;
+    }
+    
 }
