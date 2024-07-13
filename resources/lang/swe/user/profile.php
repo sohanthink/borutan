@@ -13,8 +13,8 @@ return[
     'cancel' => "Avbryt",
     'password'=>"Gammalt lösenord",
     "change_password"=>"Ändra ditt lösenord",
-    "package_name "=>"Paket Paket ismi",
-    'package_proposals'=>"Paket Sözleşmesi",
-    'package_price'=>"Paket fiyatı",
-    'package_desc'=>"Paket açıklaması",
+    "package_name"=>"Paketnamn",
+    'package_proposals'=>"Paketavtal",
+    'package_price'=>"Paketpris",
+    'package_desc'=>"Paketbeskrivning",
 ];

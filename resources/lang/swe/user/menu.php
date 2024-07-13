@@ -6,8 +6,8 @@ return[
     'profile'=> "Profil",
     'logout'=> "Logga ut",
     'rentalprofile'=> "Hyresprofil",
-    'Medlemskap'=>'Membership',
-    'active_package'=>'Aktif Paket',
+    'Membership'=>'Bli medlem',
+    'active_package'=>'Ditt medlemskap',
     'contact'=>'Kontakt'
     
 ];

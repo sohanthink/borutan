@@ -36,26 +36,32 @@
         <div class="w-1/4 hidden md:block">
             <ul class="flex gap-8 justify-center font-medium">
                 <li class="{{ request()->is('/') ? 'active' : '' }} whitespace-nowrap"><a
-                        href="{{ route('index') }}">{{__('front/common.home')}}</a></li>
-                <li class="whitespace-nowrap"><a href="{{ url('/') }}#about">{{__('front/common.about')}}</a></li>
-                <li class="whitespace-nowrap"><a href="{{ url('/') }}#faq">{{__('front/common.qandans')}}</a></li>
+                        href="{{ route('index') }}">{{ __('front/common.home') }}</a></li>
+                <li class="whitespace-nowrap"><a href="{{ url('/') }}#about">{{ __('front/common.about') }}</a>
+                </li>
+                <li class="whitespace-nowrap"><a href="{{ url('/') }}#faq">{{ __('front/common.qandans') }}</a>
+                </li>
                 <li class="{{ request()->is('pricing') ? 'active' : '' }} whitespace-nowrap"><a
-                        href="{{ route('pricing') }}">{{__('front/common.pricing')}}</a></li>
+                        href="{{ route('pricing') }}">{{ __('front/common.pricing') }}</a></li>
                 <li class="{{ request()->is('contact') ? 'active' : '' }} whitespace-nowrap"><a
-                        href="{{ route('contact') }}">{{__('front/common.contact')}}</a></li>
-                        <li>
-                            <select class="form-control lang-change">
-                                <option value="en" {{ session()->get('lang_code')=='en' ? 'selected' : ''}}>EN</option>
-                                <option value="swe" {{ session()->get('lang_code')=='swe' ? 'selected' : ''}}>SWE</option>
-                           </select></li>
+                        href="{{ route('contact') }}">{{ __('front/common.contact') }}</a></li>
+                <li>
+                    <select class="form-control lang-change">
+                        <option value="en" {{ session()->get('lang_code') == 'en' ? 'selected' : '' }}>
+                            EN
+                        </option>
+                        <option value="swe" {{ session()->get('lang_code') == 'swe' ? 'selected' : '' }}>SE
+                        </option>
+                    </select>
+                </li>
             </ul>
         </div>
         <div class="w-1/2 md:w-1/3 flex justify-end gap-1 sm:gap-3">
             <a href="{{ route('login') }}"
-                class="px-2 py-1 sm:px-4 sm:py-2 bg-[#9628fd] text-white rounded text-nowrap text-sm hidden md:block">{{__('front/common.login')}}
-                </a>
+                class="px-2 py-1 sm:px-4 sm:py-2 bg-[#9628fd] text-white rounded text-nowrap text-sm hidden md:block">{{ __('front/common.login') }}
+            </a>
             <a href="{{ route('register') }}"
-                class="px-2 py-1 sm:px-4 sm:py-2 bg-[#9628fd] text-white rounded text-nowrap text-sm hidden md:block">{{__('front/common.register')}}</a>
+                class="px-2 py-1 sm:px-4 sm:py-2 bg-[#9628fd] text-white rounded text-nowrap text-sm hidden md:block">{{ __('front/common.register') }}</a>
 
             <!-- <button class="px-2 py-1 sm:px-4 sm:py-2 bg-blue-950 text-white rounded text-nowrap text-sm">Find An
                 Apartment</button> -->
@@ -71,21 +77,23 @@
             <div id="menu" class="hidden menu">
                 <ul class="bg-[#1f2937] z-50 text-white absolute top-14 left-0 w-full p-6 space-y-10 text-center">
                     <li class="{{ request()->is('/') ? 'active' : '' }} whitespace-nowrap"><a
-                            href="{{ route('index') }}">{{__('front/common.home')}}</a></li>
-                    <li class="whitespace-nowrap"><a href="{{ url('/') }}#about">{{__('front/common.about')}}</a></li>
-                    <li class="whitespace-nowrap"><a href="{{ url('/') }}#faq">{{__('front/common.qandans')}}</a></li>
+                            href="{{ route('index') }}">{{ __('front/common.home') }}</a></li>
+                    <li class="whitespace-nowrap"><a
+                            href="{{ url('/') }}#about">{{ __('front/common.about') }}</a></li>
+                    <li class="whitespace-nowrap"><a
+                            href="{{ url('/') }}#faq">{{ __('front/common.qandans') }}</a></li>
                     <li class="{{ request()->is('pricing') ? 'active' : '' }} whitespace-nowrap"><a
-                            href="{{ route('pricing') }}">{{__('front/common.pricing')}}</a></li>
+                            href="{{ route('pricing') }}">{{ __('front/common.pricing') }}</a></li>
                     <li class="{{ request()->is('contact') ? 'active' : '' }} whitespace-nowrap"><a
-                            href="{{ route('contact') }}">{{__('front/common.contact')}}</a></li>
+                            href="{{ route('contact') }}">{{ __('front/common.contact') }}</a></li>
 
                     <li><a href="{{ route('login') }}"
-                            class="px-2 py-1 sm:px-4 sm:py-2 bg-[#9628fd] text-white rounded text-nowrap text-sm">{{__('front/common.login')}}
-                            </a>
+                            class="px-2 py-1 sm:px-4 sm:py-2 bg-[#9628fd] text-white rounded text-nowrap text-sm">{{ __('front/common.login') }}
+                        </a>
                     </li>
                     <li><a href="{{ route('register') }}"
-                            class="px-2 py-1 sm:px-4 sm:py-2 bg-[#9628fd] text-white rounded text-nowrap text-sm">{{__('front/common.register')}}
-                            </a></li>
+                            class="px-2 py-1 sm:px-4 sm:py-2 bg-[#9628fd] text-white rounded text-nowrap text-sm">{{ __('front/common.register') }}
+                        </a></li>
                 </ul>
             </div>
         </div>
@@ -100,25 +108,25 @@
             class="flex justify-between w-10/12 mx-auto mt-20 py-20 font-primary text-white border-b-2 border-grey-500 ">
             <div class="hidden md:block">
                 <ul>
-                    <li class="font-bold pb-2 text-xl">{{__('front/common.member')}}</li>
+                    <li class="font-bold pb-2 text-xl">{{ __('front/common.member') }}</li>
 
                     {{-- <li class="py-1 font-thin">Bli Medlem</li> --}}
 
                     <a href="{{ route('register') }}">
-                        <li class="py-1 font-thin">{{__('front/common.register')}}</li>
+                        <li class="py-1 font-thin">{{ __('front/common.register') }}</li>
                     </a>
 
                     <a href="{{ route('terms') }}">
-                        <li class="py-1 font-thin">{{__('front/common.terms')}}</li>
+                        <li class="py-1 font-thin">{{ __('front/common.terms') }}</li>
                     </a>
                     <a href="{{ route('privacy') }}">
-                        <li class="py-1 font-thin">{{__('front/common.policy')}}</li>
+                        <li class="py-1 font-thin">{{ __('front/common.policy') }}</li>
                     </a>
                 </ul>
             </div>
             <div>
                 <ul>
-                    <li class="font-bold pb-2 text-xl">{{__('front/common.contact')}}</li>
+                    <li class="font-bold pb-2 text-xl">{{ __('front/common.contact') }}</li>
                     <li class="py-1 font-thin">Info@BoRutan.se</li>
                     <li class="py-1 font-thin">Klarabergsviadukten 70,</li>
                     <li class="py-1 font-thin border-spacing-1 border-white border-b-2">111 64 Stockholm, Sverige</li>
@@ -130,7 +138,8 @@
             <div class="hidden md:block">
                 <ul>
                     <li class="font-bold pb-2 text-xl">Information</li>
-                    <li class="whitespace-nowrap py-1 font-thin"><a href="{{ url('/') }}#about">{{__('front/common.about')}}</a></li>
+                    <li class="whitespace-nowrap py-1 font-thin"><a
+                            href="{{ url('/') }}#about">{{ __('front/common.about') }}</a></li>
                     <li class="py-1 font-thin">Info@borutan.se</li>
                 </ul>
             </div>
@@ -188,15 +197,13 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
- 
         var url = "{{ route('lang.update') }}";
-      
-          $('.lang-change').change(function(){
-           let lang_code = $(this).val();
-            window.location.href = url + "?lang="+ lang_code;
-          });
-      
-      </script>
+
+        $('.lang-change').change(function() {
+            let lang_code = $(this).val();
+            window.location.href = url + "?lang=" + lang_code;
+        });
+    </script>
 
     <script src="{{ asset('assets') }}/js/jquery.min.js"></script>
     <script src="{{ asset('assets/js/toastr.min.js') }}"></script>
