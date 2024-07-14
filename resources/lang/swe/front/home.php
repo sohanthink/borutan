@@ -80,9 +80,11 @@ return[
 'ans_15'=>'Nej, det kostar inte att få ett förstahandskontrakt i sig förutom medlemskapet hos BoRutan. Vanligtvis betalar man en deposition och eventuellt första månadens hyra när kontraktet undertecknas, men det är inte en avgift för själva kontraktet.',
 'ques_16'=>'Hittar du inte svar på din fråga?',
 'ans_16'=>'Kontakta oss här via vårt kontaktformulär eller via info@borutan.se.',
-
-''=>'',
-''=>'',
+'package_service'=>'24/7 personlig service',
+'package_period'=>'Ingen bindningstid eller uppsägningstid',
+'package_searches'=>'bostadssökningar i månaden med dina kriterier',
+'package_apartment'=>'Personliga lägenhetstips via e-post',
+'package_tips'=>'Personliga lägenhetstips via SMS',
 ];
 
 

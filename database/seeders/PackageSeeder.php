@@ -16,16 +16,17 @@ class PackageSeeder extends Seeder
     public function run()
     {
         Package::create([
-            'name' => 'Prio',
-            'contract' => 1,
-            'price' => 349,
-            'status' => 'Active',
-        ]);
-        Package::create([
             'name' => 'Bas',
-            'contract' => 2,
+            'contract' => 2500,
             'price' => 299,
             'status' => 'Active',
         ]);
+        Package::create([
+            'name' => 'Prio',
+            'contract' => 500,
+            'price' => 349,
+            'status' => 'Active',
+        ]);
+
     }
 }
