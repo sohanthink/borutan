@@ -80,10 +80,13 @@ return[
 'ans_15'=>'Nej, det kostar inte att få ett förstahandskontrakt i sig förutom medlemskapet hos BoRutan. Vanligtvis betalar man en deposition och eventuellt första månadens hyra när kontraktet undertecknas, men det är inte en avgift för själva kontraktet.',
 'ques_16'=>'Hittar du inte svar på din fråga?',
 'ans_16'=>'Kontakta oss här via vårt kontaktformulär eller via info@borutan.se.',
+<<<<<<< HEAD
 'ques_17'=>"Hur tjänar BoRutan pengar?",
 'ans_17'=>"BoRutan generates revenue through memberships, but primarily through partnerships with property companies that pay for our service to match them with suitable tenants.",
 
 
+=======
+>>>>>>> 1a50955 (Update)
 'package_service'=>'24/7 personlig service',
 'package_period'=>'Ingen bindningstid eller uppsägningstid',
 'package_searches'=>'bostadssökningar i månaden med dina kriterier',

@@ -70,6 +70,15 @@
                                 <li class="nav-item mx-2 ">
                                     {{ __('user/menu.package_name') }} <span
                                         class="badge bg-success">{{ auth()->user()->package->name }}</span>
+<<<<<<< HEAD
+=======
+                                </li>
+                            @endisset
+                            @isset(auth()->user()->package)
+                                <li class="nav-item mx-2 ">
+                                    {{ __('user/menu.remaning_searches') }} <span
+                                        class="badge bg-primary">{{ auth()->user()->contract }}</span>
+>>>>>>> 1a50955 (Update)
                                 </li>
                             @endisset
                             @isset(auth()->user()->package)
