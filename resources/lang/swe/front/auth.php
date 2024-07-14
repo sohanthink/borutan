@@ -43,4 +43,6 @@ return[
     'send_reset_link'=>"Skicka länk för att återställa lösenord",
     'reset_code' => "Återställ-12345678", 
     'reset_text' => "Återställ ditt lösenord",
+
+    'login_image' => "{{ asset('Images/register.png') }}",
 ];
