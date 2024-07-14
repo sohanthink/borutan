@@ -43,4 +43,6 @@ return[
     'send_reset_link' => "Send password reset link",
     'reset_code' => "Reset-12345678",
     'reset_text' => "Reset your password",
+
+    'login_image' => "{{ asset('Images/mobile/login.webp') }}",
 ];

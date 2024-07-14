@@ -48,9 +48,10 @@
                 <li>
                     <select class="form-control lang-change">
                         <option value="en" {{ session()->get('lang_code') == 'en' ? 'selected' : '' }}>
-                            EN
+                            &#x1F1EC;&#x1F1E7;
                         </option>
-                        <option value="swe" {{ session()->get('lang_code') == 'swe' ? 'selected' : '' }}>SE
+                        <option value="swe" {{ session()->get('lang_code') == 'swe' ? 'selected' : '' }}>
+                            &#x1F1F8;&#x1F1EA;
                         </option>
                     </select>
                 </li>
