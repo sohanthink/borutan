@@ -7,7 +7,7 @@ return[
     'logout'=> "Logga ut",
     'rentalprofile'=> "Hyresprofil",
     'Membership'=>'Bli medlem',
-    'active_package'=>'Aktivt medlemskap',
+    'active_package'=>'Ditt medlemskap',
     'contact'=>'Kontakt',
     'remaning_searches'=>'Återstående sökningar',
 ];

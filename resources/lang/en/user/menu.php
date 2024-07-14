@@ -6,8 +6,8 @@ return[
     'profile'=>"Profile",    
     'logout'=>"Log out",    
     'rentalprofile'=>"Rental profile",  
-    'Membership'=>'Become a member',
-    'active_package'=>'Active membership',
+    'Membership'=>'Membership',
+    'active_package'=>'Active package',
     'contact'=>'Contact',
     'remaning_searches'=>'Remaning searches'
 ];

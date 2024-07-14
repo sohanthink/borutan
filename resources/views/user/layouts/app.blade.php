@@ -56,10 +56,26 @@
                                     </option>
                                 </select>
                             </li>
+                            <li class="nav-item">
+                                <select class="form-control lang-change">
+                                    <option value="en" {{ session()->get('lang_code') == 'en' ? 'selected' : '' }}>
+                                        &#x1F1EC;&#x1F1E7;
+                                    </option>
+                                    <option value="swe" {{ session()->get('lang_code') == 'swe' ? 'selected' : '' }}>
+                                        &#x1F1F8;&#x1F1EA;
+                                    </option>
+                                </select>
+                            </li>
                             @isset(auth()->user()->package)
                                 <li class="nav-item mx-2 ">
                                     {{ __('user/menu.package_name') }} <span
                                         class="badge bg-success">{{ auth()->user()->package->name }}</span>
+                                </li>
+                            @endisset
+                            @isset(auth()->user()->package)
+                                <li class="nav-item mx-2 ">
+                                    {{ __('user/menu.remaning_searches') }} <span
+                                        class="badge bg-primary">{{ auth()->user()->contract }}</span>
                                 </li>
                             @endisset
                             @isset(auth()->user()->package)
