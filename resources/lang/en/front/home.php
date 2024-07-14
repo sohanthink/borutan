@@ -81,9 +81,10 @@ return[
 'ques_16'=>"Can't find an answer to your question?",
 'ans_16'=>"Contact us here through our contact form or via info@borutan.se.",
 
+'package_service'=>'24/7 personal service',
+'package_period'=>'No binding period or notice period',
+'package_searches'=>'apartment searches per month with your criteria',
+'package_apartment'=>'Personalized apartment tips via email',
+'package_tips'=>'Personalized apartment tips via SMS',
 
-
-''=>'',
-''=>'',
-''=>'',
 ];
