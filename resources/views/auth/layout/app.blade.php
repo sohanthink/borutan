@@ -75,8 +75,8 @@
         @if(Session::has('resent'))
             <script>
                 Swal.fire({
-                title: "{{ session('title')}} ?? 'SUCCESS'",
-                text: "En ny verifieringslänk har skickats till din e-postadress.",
+                title: "{{ session('title') ?? 'SUCCESS'}} ",
+                text: "{{__('front/auth.recent_again')}}",
                 icon: "success"
                 });
             </script>

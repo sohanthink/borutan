@@ -8,6 +8,6 @@ return[
     'rentalprofile'=> "Hyresprofil",
     'Membership'=>'Bli medlem',
     'active_package'=>'Ditt medlemskap',
-    'contact'=>'Kontakt'
-    
+    'contact'=>'Kontakt',
+    'remaning_searches'=>'Återstående sökningar',
 ];
