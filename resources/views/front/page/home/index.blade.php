@@ -550,7 +550,6 @@
                                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                             </svg>
                                         </a>
-
                                     @endauth
                                 </div>
                             </div>
