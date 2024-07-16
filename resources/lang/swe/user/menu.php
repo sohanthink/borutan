@@ -8,10 +8,14 @@ return[
     'rentalprofile'=> "Hyresprofil",
     'Membership'=>'Bli medlem',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'active_package'=>'Aktivt medlemskap',
 =======
     'active_package'=>'Ditt medlemskap',
 >>>>>>> 1a50955 (Update)
+=======
+    'active_package'=>'Ditt medlemskap',
+>>>>>>> bb82e2e (Update)
     'contact'=>'Kontakt',
     'remaning_searches'=>'Återstående sökningar',
 ];
