@@ -80,6 +80,8 @@ return[
 'ans_15'=>"No, obtaining a first-hand lease itself does not cost anything apart from the membership fee to BoRutan. Typically, you pay a deposit and possibly the first month's rent when signing the lease, but there is no fee for the lease itself.",
 'ques_16'=>"Can't find an answer to your question?",
 'ans_16'=>"Contact us here through our contact form or via info@borutan.se.",
+'ques_17'=>"How does BoRutan make money?",
+'ans_17'=>"BoRutan generates revenue through memberships, but primarily through partnerships with property companies that pay for our service to match them with suitable tenants.",
 
 'package_service'=>'24/7 personal service',
 'package_period'=>'No binding period or notice period',

@@ -483,7 +483,7 @@
                                                         d="M16.4444 3.03947C15.1056 2.37412 13.5965 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.6244 21.9793 11.2537 21.939 10.8889M9 11L12 14L22 4"
                                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                         stroke-linejoin="round"></path>
-                                                    </svg>
+                                                </svg>
                                                 <span>{{ __('front/home.package_service') }} </span>
                                             </li>
                                             <li class="flex items-center font-medium space-x-2 text-black">
@@ -846,7 +846,8 @@
                         </div>
                     </div>
                 </li>
-                <li>
+
+                {{-- <li>
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
                         aria-expanded="false" onclick="toggleFAQ(this)">
@@ -865,7 +866,8 @@
                             <div class="space-y-2 leading-relaxed">{{ __('front/home.ans_7') }}</div>
                         </div>
                     </div>
-                </li>
+                </li> --}}
+
                 {{-- <li>
                     <button
                         class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
@@ -1015,6 +1017,47 @@
                     </div>
                 </li>
 
+                <li>
+                    <button
+                        class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+                        aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span class="flex-1 text-base-content">{{ __('front/home.ques_15') }}</span>
+                        <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center transition duration-200 ease-out false"></rect>
+                            <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                        </svg>
+                    </button>
+                    <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+                        style="transition: max-height 0.3s ease-in-out 0s;">
+                        <div class="pb-5 leading-relaxed">
+                            <div class="space-y-2 leading-relaxed">{{ __('front/home.ans_15') }}</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <button
+                        class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+                        aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span class="flex-1 text-base-content">{{ __('front/home.ques_17') }}</span>
+                        <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center transition duration-200 ease-out false"></rect>
+                            <rect y="7" width="16" height="2" rx="1"
+                                class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                        </svg>
+                    </button>
+                    <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
+                        style="transition: max-height 0.3s ease-in-out 0s;">
+                        <div class="pb-5 leading-relaxed">
+                            <div class="space-y-2 leading-relaxed">{{ __('front/home.ans_17') }}</div>
+                        </div>
+                    </div>
+                </li>
 
                 <li>
                     <button
@@ -1037,26 +1080,7 @@
                     </div>
                 </li>
 
-                <li>
-                    <button
-                        class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
-                        aria-expanded="false" onclick="toggleFAQ(this)">
-                        <span class="flex-1 text-base-content">{{ __('front/home.ques_15') }}</span>
-                        <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect y="7" width="16" height="2" rx="1"
-                                class="transform origin-center transition duration-200 ease-out false"></rect>
-                            <rect y="7" width="16" height="2" rx="1"
-                                class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
-                        </svg>
-                    </button>
-                    <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden"
-                        style="transition: max-height 0.3s ease-in-out 0s;">
-                        <div class="pb-5 leading-relaxed">
-                            <div class="space-y-2 leading-relaxed">{{ __('front/home.ans_15') }}</div>
-                        </div>
-                    </div>
-                </li>
+
 
             </ul>
         </div>

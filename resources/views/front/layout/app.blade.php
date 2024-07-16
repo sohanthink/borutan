@@ -27,7 +27,7 @@
 
     <!-- navar csss sytarts from here -->
     <div class="nav font-primary flex justify-between items-center w-11/12 md:w-4/5 mx-auto py-5">
-        <div class="md:w-1/3 w-1/2">
+        <div class="md:w-[20%] w-1/2">
             <a href="{{ url('/') }}">
                 <img class="md:h-12 h-7"
                     src="{{ setting('site_logo') != null ? Storage::url(setting('site_logo')) : '' }}"
@@ -57,7 +57,7 @@
                 </li>
             </ul>
         </div>
-        <div class="w-1/2 md:w-1/3 flex justify-end gap-1 sm:gap-3">
+        <div class="w-1/2 md:w-[20%] flex justify-end gap-1 sm:gap-3">
             <a href="{{ route('login') }}"
                 class="px-2 py-1 sm:px-4 sm:py-2 bg-[#9628fd] text-white rounded text-nowrap text-sm hidden md:block">{{ __('front/common.login') }}
             </a>

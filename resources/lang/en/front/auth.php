@@ -1,6 +1,6 @@
 <?php
 return[
-    'login' =>"Log In",
+    'login' =>"Log in",
     'heading' =>"Log in below to access your account.",
     'heading1' =>"Log in below to access",
     'heading2' =>"your account.",
