@@ -4,10 +4,10 @@ return[
     'expire_date'=>"Expire date :",    
     'proposals'=>"Remaining proposals:",    
     'profile'=>"Profile",    
-    'logout'=>"Log Out",    
+    'logout'=>"Log out",    
     'rentalprofile'=>"Rental profile",  
-    'Membership'=>'Membership',
-    'active_package'=>'Active package',
+    'Membership'=>'Become a member',
+    'active_package'=>'Active membership',
     'contact'=>'Contact',
     'remaning_searches'=>'Remaning searches'
 ];

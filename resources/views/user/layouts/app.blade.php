@@ -63,10 +63,10 @@
                                 </li>
                             @endisset
                             @isset(auth()->user()->package)
-                                <li class="nav-item mx-2 ">
+                                {{-- <li class="nav-item mx-2 ">
                                     {{ __('user/menu.remaning_searches') }} <span
                                         class="badge bg-primary">{{ auth()->user()->contract }}</span>
-                                </li>
+                                </li> --}}
                             @endisset
                             @isset(auth()->user()->expire_date)
                                 <li class="nav-item mx-2">
